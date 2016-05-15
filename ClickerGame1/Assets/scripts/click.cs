@@ -2,10 +2,11 @@
 using System.Collections;
 
 public class click : MonoBehaviour{
-	public static int count =0;
+	public GameObject driver;
+	public Player player;
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
@@ -13,8 +14,13 @@ public class click : MonoBehaviour{
 		
 	}
 
-	void OnMouseDown (){
-		count += 1;
-		Debug.Log (count);
+	public void OnMouseDown (){
+		player = driver.GetComponent<Driver>().getPlayer();
+		Debug.Log (player.getAttack());
+
 	}
+	public void attackEnemy(Player player, Enemy ememy){
+		
+	}
+
 }
