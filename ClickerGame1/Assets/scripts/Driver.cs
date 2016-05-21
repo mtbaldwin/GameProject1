@@ -19,6 +19,9 @@ public class Driver : MonoBehaviour {
 	public Player getPlayer(){
 		return this.player;
 	}
+	public Enemy getEnemy(){
+		return this.enemy;
+	}
 
 
 }
