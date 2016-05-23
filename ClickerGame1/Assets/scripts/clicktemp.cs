@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 //using UnityEngine.UI;
 
-public class click : MonoBehaviour{
+public class clicktemp : MonoBehaviour{
 	public GameObject driver;
+    public Image HPbar;
 	public Player player;
 	public Enemy enemy;
 
 	//public Image HPbar;
-	public float fillamount = 1;
+	public float fillamount;
 
 	// Use this for initialization
 	void Start () {
@@ -38,7 +40,9 @@ public class click : MonoBehaviour{
 
 	public void updateBar(){
 		fillamount = (enemy.getHealth() / enemy.getStartingHealth());
-		//HPbar.fillAmount = fillamount;
+        HPbar.fillAmount = fillamount;
 	}
+
+    
 
 }
